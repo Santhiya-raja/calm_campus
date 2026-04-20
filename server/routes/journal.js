@@ -1,9 +1,9 @@
-const router  = require('express').Router();
-const axios   = require('axios');
+const router = require('express').Router();
+const axios = require('axios');
 const Journal = require('../models/Journal');
-const auth    = require('../middleware/auth');
+const auth = require('../middleware/auth');
 
-const AI_URL = process.env.AI_SERVICE_URL || 'http://localhost:8000';
+const AI_URL = process.env.AI_SERVICE_URL || 'https://calm-campus-ai.onrender.com';
 
 // ── POST /api/journal ─────────────────────────────────────────────────────
 router.post('/', auth, async (req, res) => {
@@ -29,8 +29,8 @@ router.post('/', auth, async (req, res) => {
       entryText, mood: mood || '',
       sentimentScore: aiData.sentimentScore,
       sentimentLabel: aiData.sentimentLabel,
-      stressors:      aiData.stressors,
-      aiSummary:      aiData.aiSummary,
+      stressors: aiData.stressors,
+      aiSummary: aiData.aiSummary,
     });
 
     console.log(`✅ Journal saved [${req.user.email}]`);
