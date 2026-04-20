@@ -62,7 +62,9 @@ app.get('/api/health', (req, res) => {
 });
 
 // ─── Start Server ─────────────────────────────────────────────────────────
-const PORT = process.env.PORT || 5050;
+
+// This automatically picks the cloud URL on Vercel and localhost on your Mac
+const API_URL = import.meta.env.VITE_API_URL || 'https://calm-campus-server.onrender.com/api';
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
