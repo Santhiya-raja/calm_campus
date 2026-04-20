@@ -62,7 +62,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // ─── Start Server ─────────────────────────────────────────────────────────
-const API_URL = import.meta.env.VITE_API_URL || 'https://calm-campus-server.onrender.com/api';
+const PORT = process.env.PORT || 5050;
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
