@@ -1,6 +1,5 @@
-fastapi
-uvicorn
-transformers
---index-url https://download.pytorch.org/whl/cpu
-torch
-watchfiles
+fastapi==0.104.1
+uvicorn==0.24.0
+transformers==4.35.2
+torch --index-url https://download.pytorch.org/whl/cpu
+watchfiles==0.21.0
