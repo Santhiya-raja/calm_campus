@@ -1,6 +1,7 @@
 {
   "name": "stress-assessment-server",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "Academic Stress Level Assessment System - Backend API",
   "main": "server.js",
   "scripts": {
