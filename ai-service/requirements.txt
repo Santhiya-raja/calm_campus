@@ -1,7 +1,4 @@
 fastapi
 uvicorn
-# Installs only the CPU version of torch to save 300MB of space
---index-url https://download.pytorch.org/whl/cpu
-torch==2.2.0
-transformers==4.37.0
-accelerate>=0.26.0
+transformers
+torch --index-url https://download.pytorch.org/whl/cpu
