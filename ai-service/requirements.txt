@@ -1,5 +1,6 @@
 fastapi
 uvicorn
 transformers
+--index-url https://download.pytorch.org/whl/cpu
 torch
 watchfiles
